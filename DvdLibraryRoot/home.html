@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dvd Library</title>
+
+        <style>
+        input[type=text] {
+          width: 100%;
+          box-sizing: border-box;
+          border: 2px solid #ccc;
+          border-radius: 4px;
+          font-size: 16px;
+          background-color: white;
+          padding: 6px 10px 6px 20px;
+        }
+        .button {
+          border-radius: 4px;
+          font-size: 18px;
+        }
+        </style>
+
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/styles.css" type="text/css" rel="stylesheet">
+
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/home.js"></script>
+</head>
+    <body>
+      <div class="container">
+        <h1>The DVD Library</h1>
+        <hr/>
+        <ul class="list-group" id="errorMessages"></ul>
+        <div class="row">
+            <div class="col-md-6"><button class="button" id="CreateDvdButton">Add DVD</button></div>
+
+             <select id = "myList" class="col-md-2">
+               <option value="" disabled selected hidden>Select Category</option>
+               <option value = "title">Title</option>
+               <option value = "year">Release Date</option>
+               <option value = "director">Director</option>
+               <option value = "notes">Rating</option>
+             </select>
+             <input type="text" name="Search" id="SearchTextbox" placeholder="Search Information" class="col-md-3"></input><br><br>
+             <div><button class="button" id="SearchButton">Search</button></div>
+       </div>
+     </div>
+     <br>
+
+     <div class="container" id="dvdTableDiv">
+       <table class="col-md-12">
+         <tr>
+           <th>Title</th>
+           <th>Release Date</th>
+           <th>Director</th>
+           <th>Rating</th>
+           <th></th>
+        </tr>
+        <tbody id="DvdTable"></tbody>
+      </table>
+     </div>
+
+     <div class="center" id="createFormDiv" style="display: none">
+       <div class="container">
+         <div class="col-md-12">
+             <h2>Create DVD</h2>
+         </div>
+         <div class="form-group col-md-6">
+            <label>Dvd Title</label>
+            <input type="text" id="create-title">
+         </div>
+         <div class="form-group col-md-3">
+            <label>Release Year</label>
+            <input type="text" id="create-release-year">
+         </div>
+         <div class="form-group col-md-5">
+           <label>Director</label>
+           <input type="text" id="create-director">
+         </div>
+         <div class="form-group col-md-2">
+          <select id = "create-rating" class="dropdown">
+            <option value="" disabled selected hidden>Choose Rating</option>
+            <option value = "G">G</option>
+            <option value = "PG">PG</option>
+            <option value = "PG-13">PG-13</option>
+            <option value = "R">R</option>
+          </select>
+        </div>
+          <div class="form-group col-lg-6">
+            <p>Notes:</p>
+          <textarea id="create-notes"></textarea>
+        </div>
+           <br>
+
+            <div><button class="btn btn-primary col-md-2" id="saveCreateButton">Save DVD</button>
+            <button class="btn btn-primary col-md-2" id="cancelCreateButton">Cancel</button></div>
+     </div>
+     </div>
+
+<div id="editFormDiv" style="display: none">
+  <div class="container">
+    <div class="col-md-12">
+        <h2>Edit DVD information</h2>
+    </div>
+    <input type="hidden" id="edit-dvd-Id">
+    <div class="form-group col-md-6">
+       <label>Dvd Title</label>
+       <input type="text" id="edit-title">
+    </div>
+    <div class="form-group col-md-3">
+       <label>Release Year</label>
+       <input type="text" id="edit-release-year">
+    </div>
+    <div class="form-group col-md-5">
+      <label>Director</label>
+      <input type="text" id="edit-director">
+    </div>
+    <div class="form-group col-md-2">
+     <select id = "edit-rating" class="dropdown">
+       <option value="" disabled selected hidden>Choose Rating</option>
+       <option value = "G">G</option>
+       <option value = "PG">PG</option>
+       <option value = "PG-13">PG-13</option>
+       <option value = "R">R</option>
+     </select>
+   </div>
+     <div class="form-group col-lg-6">
+       <p>Notes:</p>
+     <textarea id="edit-notes"></textarea>
+   </div>
+      <br>
+
+       <div><button class="btn btn-primary col-md-2" id="saveEditButton" value="">Save DVD</button>
+       <button class="btn btn-primary col-md-2" id="cancelEditButton">Cancel</button></div>
+</div>
+</div>
+
+   </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Dvd</title>
+    </head>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/home.js"></script>
+    <body>
+      <div class="center" id="banner">
+          <div class="col-md-12">
+              <h1>Edit Dvd</h1>
+              <ul class='list-group' id='errorMessages'></ul>
+          </div>
+          <p>Dvd Title</p> <input type="text" name="Title" id="EditDvdTitle" class="square col-sm-2"></input <br><br>
+          <p>Release Year</p> <input type="text" name="Release Year" id="EditReleaseYear" class="square col-sm-2"></input> <br><br>
+          <p>Director</p> <input type="text" name="Director" id="EditDirector" class="square col-sm-2"></input> <br><br>
+
+           <select id = "myList" class="square col-sm-2">
+             <option value = "1">G</option>
+             <option value = "2">PG</option>
+             <option value = "3">PG-13</option>
+             <option value = "4">R</option>
+           </select>
+           <br><br>
+
+           <textarea rows="4" cols="50" id="EditNotes">
+             </textarea>
+             <br><br>
+
+             <div class="square col-sm-2"><p></p><button type="button" id="CancelDvdEdit">Canel</button></div>
+             <div class="square col-sm-2"><p></p><button type="button" id="SaveChanges"">Save Changes</button></div>
+    </body>
+</html>
